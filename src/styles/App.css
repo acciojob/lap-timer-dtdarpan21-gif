@@ -1,1 +1,51 @@
 
+.container {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.container h1 {
+    font-size: 32px;
+}
+
+.timer {
+    font-size: 48px;
+    margin: 30px 0;
+    font-family: monospace;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+}
+
+.buttons button:hover {
+    background-color: #0056b3;
+}
+
+.laps {
+    margin-top: 30px;
+}
+
+.lap-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    margin: 8px 0;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
