@@ -26,12 +26,11 @@ const App = () => {
   };
 
   const recordLap = () => {
-    if(timerRef. current === null){
-      return;
-    }
-
+    const recordLap = () => {
     setLaps((prevLaps) => [...prevLaps, time]);
-  };
+};
+
+};
 
   const resetTimer = () => {
     stopTimer();
@@ -41,7 +40,7 @@ const App = () => {
   };
   useEffect(() =>{
     return () => {
-      clearIntrval(timerRef.current);
+      clearInterval(timerRef.current);
 
     };
   },[]);
@@ -66,11 +65,22 @@ const App = () => {
         <button onClick ={recordLap}>lap</button>
         <button onClick ={resetTimer}>reset</button>
       </div>
-      <div className = "lap-item" key ={index}>
-        <span> Lap {index + 1}</span>
-        <span> {formatTime(laps)}</span>
-        
-      </div>
+      
+<div className="laps">
+    <h2>Lap Times</h2>
+
+    {laps.length > 0 ? (
+        laps.map((lap, index) => (
+            <div className="lap-item" key={index}>
+                <span>Lap {index + 1}</span>
+                <span>{formatTime(lap)}</span>
+            </div>
+        ))
+    ) : (
+        <p>No laps recorded yet.</p>
+    )}
+</div>
+
       
         
     </div>
