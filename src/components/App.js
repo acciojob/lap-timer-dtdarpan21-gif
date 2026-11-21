@@ -26,11 +26,12 @@ const App = () => {
   };
 
   const recordLap = () => {
-    const recordLap = () => {
-    setLaps((prevLaps) => [...prevLaps, time]);
+    
+    setLaps((prevLaps) =>{
+      return  [...prevLaps, time];
+    });
 };
 
-};
 
   const resetTimer = () => {
     stopTimer();
